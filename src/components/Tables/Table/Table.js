@@ -1,4 +1,4 @@
-import React, {Component} from 'react'; //importowanie REACT'a
+import React from 'react'; //importowanie REACT'a
 import styles from './Table.module.css';
 // import imgTable from '../../../assets/images/table (1).jpg';
 import { Row, Col, Button, Container } from 'react-bootstrap';

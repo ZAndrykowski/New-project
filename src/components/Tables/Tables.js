@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; //importowanie REACT'a
+
+import {Component, React} from 'react'; //importowanie REACT'a
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,16 +9,16 @@ import styles from './Tables.module.css';
 
 
 class Tables extends Component{
-
-    render() {
+    render(){
         return (
             <Container fluid="xl" className={styles.container}>
                 <Row>
                     <Col xs={3}><h2 className={styles.table}>Dostępne stoliki: </h2></Col>
                     <Col xs={7}><Button as="input" type="reset" value="Odśwież" /></Col>
-                    {this.props.tables.map(table => <Table {...table}/>)}
+                    {this.props.tables.map(tables => <Table {...tables}/>)}
                 </Row>
-                <Row>
+                
+                {/* <Row>
                     <Col><Table /></Col>
                     <Col><Table /></Col>
                     <Col><Table /></Col>
@@ -79,7 +80,7 @@ class Tables extends Component{
                     <Col><Table /></Col>
                     <Col><Table /></Col>
                     <Col><Table /></Col>
-                </Row>
+                </Row> */}
             </Container>
         );
     }
