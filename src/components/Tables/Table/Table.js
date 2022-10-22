@@ -8,7 +8,7 @@ function Table(props){
         <Col>
         
         <Container fluid="md" className={styles.table}>
-        <Row>
+        <Row className={styles.flexrow}>
             <Col xs={8} md={14}>
                 {props.image}
                 {/* <img src={imgTable} 

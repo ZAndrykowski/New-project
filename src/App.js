@@ -32,6 +32,72 @@ class App extends Component {
           seats: '4',
           image: '',
           reserve: false
+        },
+        {
+          id: 4,
+          seats: '4',
+          image: '',
+          reserve: false
+        },
+        {
+          id: 5,
+          seats: '4',
+          image: '',
+          reserve: false
+        },
+        {
+          id: 6,
+          seats: '4',
+          image: '',
+          reserve: false
+        },
+        {
+          id: 7,
+          seats: '4',
+          image: '',
+          reserve: false
+        },
+        {
+          id: 8,
+          seats: '4',
+          image: '',
+          reserve: true
+        },
+        {
+          id: 9,
+          seats: '4',
+          image: '',
+          reserve: true
+        },
+        {
+          id: 10,
+          seats: '4',
+          image: '',
+          reserve: false
+        },
+        {
+          id: 11,
+          seats: '4',
+          image: '',
+          reserve: false
+        },
+        {
+          id: 12,
+          seats: '4',
+          image: '',
+          reserve: false
+        },
+        {
+          id: 13,
+          seats: '4',
+          image: '',
+          reserve: false
+        },
+        {
+          id: 14,
+          seats: '4',
+          image: '',
+          reserve: false
         }
       ]
     };

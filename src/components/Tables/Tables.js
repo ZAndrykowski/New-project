@@ -12,12 +12,12 @@ class Tables extends Component{
     render(){
         return (
             <Container fluid="xl" className={styles.container}>
-                <Row>
+                <Row className={styles.flexrow}>
                     <Col xs={3}><h2 className={styles.table}>Dostępne stoliki: </h2></Col>
                     <Col xs={7}><Button as="input" type="reset" value="Odśwież" /></Col>
                     
                 </Row>
-                <Row>
+                <Row className={styles.flexrow}>
                     {this.props.tables.map(tables => <Table {...tables}/>)}
                 </Row>
                 
