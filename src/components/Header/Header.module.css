@@ -1,0 +1,15 @@
+.header {
+    height: 50px;
+    background-color: blanchedalmond;
+    background: url(../../assets/images/header_img.jpg);
+    background-size: 100%;
+    background-position: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.text{
+    color:azure;
+}
