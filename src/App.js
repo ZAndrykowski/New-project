@@ -101,16 +101,18 @@ class App extends Component {
         }
       ]
     };
-  }
-searchHandler(term){
-  console.log('Szukajka', term)
-}
+  };
 
+  searchHandler(stateSearch){
+    console.log("Szukaj z app.js", stateSearch);
+    // const tables = [...this.state.tables].filter(x => x.name.includes(stateSearch))
+    // this.setState({ tables });
+  };
 
   render() {
     return (
       <div className="App">
-        <Header onSearch={(term) =>this.searchHandler(term)}/>
+        <Header onSearch={(stateSearch) => this.searchHandler(stateSearch)}/>
         <Menu />
         <Login />
         <Reserve />
@@ -120,4 +122,5 @@ searchHandler(term){
   }
 }
 
+// onSearch={(stateSearch) => this.searchHandler(stateSearch)}
 export default App;

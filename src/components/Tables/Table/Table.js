@@ -5,10 +5,10 @@ import { Row, Col, Button, Container } from 'react-bootstrap';
 
 function Table(props){
     return (
-        <Col>
+        <Col className={styles.flexcol}>
         
         <Container fluid="md" className={styles.table}>
-        <Row className={styles.flexrow}>
+        <Row>
             <Col xs={8} md={14}>
                 {props.image}
                 {/* <img src={imgTable} 

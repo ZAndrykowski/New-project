@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import { propTypes } from 'react-bootstrap/esm/Image';
+import React, { useState} from 'react';
+//import { propTypes } from 'react-bootstrap/esm/Image';
 
 function Searchbar(props)
 {
+
     const [stateSearch, setStateSearch] = useState('');
 
-    const search = () =>{
+
+    const search = () => {
         console.log('Szukaj!', stateSearch);
-        props.onSearch();
+        props.onSearch(stateSearch);
     }
 
     // Czy został wciśniety Enter?
