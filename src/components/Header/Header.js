@@ -3,7 +3,7 @@ import Searchbar from './Searchbar/Searchbar'; // Importowanie wydzielonego pask
 import styles from './Header.module.css'; //import CSS dla Header
 
 
-function Header()
+function Header(props)
 {
     console.log(styles)
     return (
@@ -11,7 +11,7 @@ function Header()
         <div>
             <h4 className={styles.text}>Pod Kasztanem albo innym Ogórkiem</h4>
         </div>
-        <Searchbar />
+        <Searchbar onSearch={props.Searchbar}/>
         </header>
     );
 }

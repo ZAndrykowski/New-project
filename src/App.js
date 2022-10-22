@@ -71,19 +71,19 @@ class App extends Component {
         },
         {
           id: 10,
-          seats: '4',
+          seats: '7',
           image: '',
           reserve: false
         },
         {
           id: 11,
-          seats: '4',
+          seats: '3',
           image: '',
           reserve: false
         },
         {
           id: 12,
-          seats: '4',
+          seats: '0',
           image: '',
           reserve: false
         },
@@ -95,17 +95,22 @@ class App extends Component {
         },
         {
           id: 14,
-          seats: '4',
+          seats: '2',
           image: '',
           reserve: false
         }
       ]
     };
   }
+searchHandler(term){
+  console.log('Szukajka', term)
+}
+
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header onSearch={(term) =>this.searchHandler(term)}/>
         <Menu />
         <Login />
         <Reserve />
