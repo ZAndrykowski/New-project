@@ -5,6 +5,8 @@ import { Row, Col, Button, Container } from 'react-bootstrap';
 
 function Table(props){
     return (
+        <Col>
+        
         <Container fluid="md" className={styles.table}>
         <Row>
             <Col xs={8} md={14}>
@@ -28,6 +30,7 @@ function Table(props){
             </div>
         </Row>
         </Container>
+        </Col>
     );
 
 

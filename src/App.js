@@ -19,13 +19,19 @@ class App extends Component {
           id: 1,
           seats: '4',
           image: '',
-          reserve: ''
+          reserve: true
         },
         {
           id: 2,
           seats: '4',
           image: '',
-          reserve: ''
+          reserve: true
+        },
+        {
+          id: 3,
+          seats: '4',
+          image: '',
+          reserve: false
         }
       ]
     };

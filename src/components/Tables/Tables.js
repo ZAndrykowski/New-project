@@ -15,72 +15,13 @@ class Tables extends Component{
                 <Row>
                     <Col xs={3}><h2 className={styles.table}>Dostępne stoliki: </h2></Col>
                     <Col xs={7}><Button as="input" type="reset" value="Odśwież" /></Col>
-                    {this.props.tables.map(tables => <Table {...tables}/>)}
-                </Row>
-                
-                {/* <Row>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-
                     
                 </Row>
                 <Row>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-
+                    {this.props.tables.map(tables => <Table {...tables}/>)}
                 </Row>
-                <Row>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
+                
 
-                </Row>
-                <Row>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-
-                </Row>
-                <Row>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-
-                </Row>
-                <Row>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-
-                </Row>
-                <Row>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                    <Col><Table /></Col>
-                </Row> */}
             </Container>
         );
     }
