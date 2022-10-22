@@ -7,106 +7,120 @@ import Login from './components/Login/Login';
 import Reserve from './components/Reserve/Reserve';
 import Tables from './components/Tables/Tables';
 import { Component } from 'react'
+import imgTable from './assets/images/table (1).jpg'
 
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tables: [
-        {
-          id: 1,
-          seats: '4',
-          image: '',
-          reserve: true
-        },
-        {
-          id: 2,
-          seats: '4',
-          image: '',
-          reserve: true
-        },
-        {
-          id: 3,
-          seats: '4',
-          image: '',
-          reserve: false
-        },
-        {
-          id: 4,
-          seats: '4',
-          image: '',
-          reserve: false
-        },
-        {
-          id: 5,
-          seats: '4',
-          image: '',
-          reserve: false
-        },
-        {
-          id: 6,
-          seats: '4',
-          image: '',
-          reserve: false
-        },
-        {
-          id: 7,
-          seats: '4',
-          image: '',
-          reserve: false
-        },
-        {
-          id: 8,
-          seats: '4',
-          image: '',
-          reserve: true
-        },
-        {
-          id: 9,
-          seats: '4',
-          image: '',
-          reserve: true
-        },
-        {
-          id: 10,
-          seats: '7',
-          image: '',
-          reserve: false
-        },
-        {
-          id: 11,
-          seats: '3',
-          image: '',
-          reserve: false
-        },
-        {
-          id: 12,
-          seats: '0',
-          image: '',
-          reserve: false
-        },
-        {
-          id: 13,
-          seats: '4',
-          image: '',
-          reserve: false
-        },
-        {
-          id: 14,
-          seats: '2',
-          image: '',
-          reserve: false
-        }
-      ]
-    };
-  };
+  tables = [{
+    id: 1,
+    seats: '4',
+    image: '',
+    reserve: true,
+    place: "miejsce"
+  },
+  {
+    id: 2,
+    seats: '4',
+    image: '',
+    reserve: true,
+    place: "przy oknie"
+  },
+  {
+    id: 3,
+    seats: '4',
+    image: '',
+    reserve: false,
+    place: "na środku"
+  },
+  {
+    id: 4,
+    seats: '4',
+    image: '',
+    reserve: false,
+    place: "VIP"
+  },
+  {
+    id: 5,
+    seats: '4',
+    image: '',
+    reserve: false,
+    place: "miejsce"
+  },
+  {
+    id: 6,
+    seats: '4',
+    image: '',
+    reserve: false,
+    place: "miejsce"
+  },
+  {
+    id: 7,
+    seats: '4',
+    image: '',
+    reserve: false,
+    place: "miejsce"
+  },
+  {
+    id: 8,
+    seats: '4',
+    image: '',
+    reserve: true,
+    place: "miejsce"
+  },
+  {
+    id: 9,
+    seats: '4',
+    image: '',
+    reserve: true,
+    place: "miejsce"
+  },
+  {
+    id: 10,
+    seats: '7',
+    image: '',
+    reserve: false,
+    place: "miejsce"
+  },
+  {
+    id: 11,
+    seats: '3',
+    image: '',
+    reserve: false,
+    place: "na zewnątrz"
+  },
+  {
+    id: 12,
+    seats: '1',
+    image: '',
+    reserve: true,
+    place: "przy barze"
+  },
+  {
+    id: 13,
+    seats: '2',
+    image: '',
+    reserve: false,
+    place: "Romantycznie"
+  },
+  {
+    id: 14,
+    seats: '2',
+    image: '',
+    reserve: false,
+    place: "Romantycznie"
+  }];
+
+  state = {
+    tables: this.tables
+  }
 
   searchHandler(stateSearch){
     console.log("Szukaj z app.js", stateSearch);
-    // const tables = [...this.state.tables].filter(x => x.name.includes(stateSearch))
-    // this.setState({ tables });
+    const tables = [...this.state.tables]
+                      .filter(x => x.place.toLowerCase()
+                      .includes(stateSearch.toLowerCase()))
+    this.setState({ tables });
   };
 
   render() {
@@ -121,6 +135,4 @@ class App extends Component {
     );
   }
 }
-
-// onSearch={(stateSearch) => this.searchHandler(stateSearch)}
 export default App;
