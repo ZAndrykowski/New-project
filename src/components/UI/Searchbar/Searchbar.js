@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
-//import { propTypes } from 'react-bootstrap/esm/Image';
+import { Button } from 'react-bootstrap';
 
 const propTypes = { //Sprawdzanie właściwości Props
     onSearch: PropTypes.func.isRequired
@@ -38,11 +37,7 @@ function Searchbar(props)
         className='input-text'
         type="text" 
         placeholder='Szukajcie, a znajdziecie..'/>
-        <button
-            onClick={search} 
-            className='button'>
-            Click
-        </button>
+        <Button variant={props.theme} size="sm" onClick={search}>Click</Button>
     </div>
     );
 }

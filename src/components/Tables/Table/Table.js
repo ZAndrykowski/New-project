@@ -12,6 +12,7 @@ const propTypes = { //Sprawdzanie właściwości Props
     image: PropTypes.string.isRequired,
     missing: PropTypes.string,
 };
+
 const defaultProps = { //Nadpisanie standardowej wartości dla danego props'a
     missing: 'To jest zagubiona wartość'
 }
@@ -43,7 +44,7 @@ function Table(props){
             <div className="d-grid gap-2">
                 <p>DOSTĘPNY</p>
                 <p>{props.reserve}</p>
-                <Button variant="primary" size="lg" className={styles.button}>WYBIERZ</Button>{'  '}
+                <Button variant={props.theme} size="lg" className={styles.button}>WYBIERZ</Button>{'  '}
             </div>
         </Row>
         </Container>

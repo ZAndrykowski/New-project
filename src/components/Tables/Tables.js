@@ -23,11 +23,15 @@ class Tables extends Component{
             <Container fluid="xl" className={styles.container}>
                 <Row className={styles.flexrow}>
                     <Col xs={3}><h2 className={styles.table}>Dostępne stoliki: </h2></Col>
-                    <Col xs={7}><Button as="input" type="reset" value="Odśwież" /></Col>
+                    <Col xs={7}><Button variant={this.props.theme} as="input" type="reset" value="Odśwież" /></Col>
                     
                 </Row>
                 <Row className={styles.flexrow}>
-                    {this.props.tables.map(tables => <Table {...tables}/>)}
+                    {this.props.tables.map(table => 
+                    <Table 
+                    key={table.id} {...table} 
+                    theme={this.props.theme} />
+                    )}
                 </Row>
                 
 
