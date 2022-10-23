@@ -6,7 +6,8 @@ import Menu from './components/Menu/Menu';
 import Login from './components/Login/Login';
 import Reserve from './components/Reserve/Reserve';
 import Tables from './components/Tables/Tables';
-import { Component } from 'react'
+import { Component } from 'react';
+import LoadingIcon from './components/UI/LoadingIcon/LoadingIcon';
 //import imgTable from './assets/images/table (1).jpg'
 
 
@@ -135,9 +136,6 @@ class App extends Component {
     setTimeout(() => {
           this.setState({tables: this.tables, loading: false});
     }, 1000);
-    setTimeout(() => {
-      this.setState({ loading: true});
-    }, 3000);
     console.log('Component zamontowany')
   }
 
@@ -155,7 +153,7 @@ class App extends Component {
         <Login />
         <Reserve />
         {this.state.loading ? (
-          <p>loading</p> ) : (
+          LoadingIcon() ) : (
           <Tables tables={this.state.tables} />
         )}
       </div>

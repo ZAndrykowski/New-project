@@ -13,6 +13,7 @@ class Tables extends Component{
     {
         console.log('Component odmontowany - Tables')
     }
+    
     render(){
         return (
             <Container fluid="xl" className={styles.container}>
