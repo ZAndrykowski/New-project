@@ -6,7 +6,11 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Table from './Table/Table';
 import styles from './Tables.module.css';
+import PropTypes from 'prop-types';
 
+const propTypes = { //Sprawdzanie właściwości Props
+    tables: PropTypes.array.isRequired
+}
 
 class Tables extends Component{
     componentWillUnmount()
@@ -31,4 +35,6 @@ class Tables extends Component{
         );
     }
 }
+Tables.propTypes = propTypes;
+
 export default Tables;

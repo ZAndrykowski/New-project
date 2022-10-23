@@ -15,98 +15,98 @@ import LoadingIcon from './components/UI/LoadingIcon/LoadingIcon';
 class App extends Component {
   tables = [{
     id: 1,
-    seats: '4',
+    seats: 4,
     image: '',
     reserve: true,
     place: "miejsce"
   },
   {
     id: 2,
-    seats: '4',
+    seats: 4,
     image: '',
     reserve: true,
     place: "przy oknie"
   },
   {
     id: 3,
-    seats: '4',
+    seats: 4,
     image: '',
     reserve: false,
     place: "na środku"
   },
   {
     id: 4,
-    seats: '4',
+    seats: 4,
     image: '',
     reserve: false,
     place: "VIP"
   },
   {
     id: 5,
-    seats: '4',
+    seats: 4,
     image: '',
     reserve: false,
     place: "miejsce"
   },
   {
     id: 6,
-    seats: '4',
+    seats: 4,
     image: '',
     reserve: false,
     place: "miejsce"
   },
   {
     id: 7,
-    seats: '4',
+    seats: 4,
     image: '',
     reserve: false,
     place: "miejsce"
   },
   {
     id: 8,
-    seats: '4',
+    seats: 4,
     image: '',
     reserve: true,
     place: "miejsce"
   },
   {
     id: 9,
-    seats: '4',
+    seats: 4,
     image: '',
     reserve: true,
     place: "miejsce"
   },
   {
     id: 10,
-    seats: '7',
+    seats: 7,
     image: '',
     reserve: false,
     place: "miejsce"
   },
   {
     id: 11,
-    seats: '3',
+    seats: 3,
     image: '',
     reserve: false,
     place: "na zewnątrz"
   },
   {
     id: 12,
-    seats: '1',
+    seats: 1,
     image: '',
     reserve: true,
     place: "przy barze"
   },
   {
     id: 13,
-    seats: '2',
+    seats: 2,
     image: '',
     reserve: false,
     place: "Romantycznie"
   },
   {
     id: 14,
-    seats: '2',
+    seats: 2,
     image: '',
     reserve: false,
     place: "Romantycznie"
@@ -124,12 +124,6 @@ class App extends Component {
                       .includes(stateSearch.toLowerCase()))
     this.setState({ tables });
   };
-
-  constructor(props)
-  {
-    super(props)
-    console.log('Component constructor')
-  }
 
   componentDidMount()
   {
@@ -161,3 +155,5 @@ class App extends Component {
   }
 }
 export default App;
+
+//Do poprawy ponowne wczytywanie całej tablicy stolików po wczytaniu wyszukiwania... 
