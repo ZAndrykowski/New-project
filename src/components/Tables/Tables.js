@@ -9,6 +9,10 @@ import styles from './Tables.module.css';
 
 
 class Tables extends Component{
+    componentWillUnmount()
+    {
+        console.log('Component odmontowany - Tables')
+    }
     render(){
         return (
             <Container fluid="xl" className={styles.container}>

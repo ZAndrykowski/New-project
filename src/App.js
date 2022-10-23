@@ -7,7 +7,7 @@ import Login from './components/Login/Login';
 import Reserve from './components/Reserve/Reserve';
 import Tables from './components/Tables/Tables';
 import { Component } from 'react'
-import imgTable from './assets/images/table (1).jpg'
+//import imgTable from './assets/images/table (1).jpg'
 
 
 
@@ -112,7 +112,8 @@ class App extends Component {
   }];
 
   state = {
-    tables: this.tables
+    tables: [],
+    loading: true,
   }
 
   searchHandler(stateSearch){
@@ -123,14 +124,40 @@ class App extends Component {
     this.setState({ tables });
   };
 
+  constructor(props)
+  {
+    super(props)
+    console.log('Component constructor')
+  }
+
+  componentDidMount()
+  {
+    setTimeout(() => {
+          this.setState({tables: this.tables, loading: false});
+    }, 1000);
+    setTimeout(() => {
+      this.setState({ loading: true});
+    }, 3000);
+    console.log('Component zamontowany')
+  }
+
+  componentDidUpdate(){
+    console.log('Component zaktaulizowany')
+  }
+
+
   render() {
+    console.log('Component wyrenderowany')
     return (
       <div className="App">
         <Header onSearch={(stateSearch) => this.searchHandler(stateSearch)}/>
         <Menu />
         <Login />
         <Reserve />
-        <Tables tables={this.state.tables} />
+        {this.state.loading ? (
+          <p>loading</p> ) : (
+          <Tables tables={this.state.tables} />
+        )}
       </div>
     );
   }
