@@ -3,11 +3,14 @@ import './App.css';
 import React from 'react';
 import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
-import Login from './components/Login/Login';
-import Reserve from './components/Reserve/Reserve';
+//import Login from './components/Login/Login';
+//import Reserve from './components/Reserve/Reserve';
 import Tables from './components/Tables/Tables';
 import { Component } from 'react';
 import LoadingIcon from './components/UI/LoadingIcon/LoadingIcon';
+import Searchbar from './components/UI/Searchbar/Searchbar'; // Importowanie wydzielonego paska wyszukiwania
+import Layout from './components/Layout/Layout';
+import Footer from './components/Footer/Footer';
 //import imgTable from './assets/images/table (1).jpg'
 
 
@@ -142,14 +145,20 @@ class App extends Component {
     console.log('Component wyrenderowany')
     return (
       <div className="App">
-        <Header onSearch={(stateSearch) => this.searchHandler(stateSearch)}/>
-        <Menu />
-        <Login />
-        <Reserve />
-        {this.state.loading ? (
-          LoadingIcon() ) : (
-          <Tables tables={this.state.tables} />
-        )}
+        <Layout 
+          header={
+            <Header>
+            <Searchbar onSearch={stateSearch => this.searchHandler(stateSearch)}/>
+            </Header>
+          }
+          menu={<Menu />}
+          content={
+            this.state.loading ? (
+            LoadingIcon() ) : (
+            <Tables tables={this.state.tables} />
+          )}
+          footer={<Footer />}        
+        />        
       </div>
     );
   }

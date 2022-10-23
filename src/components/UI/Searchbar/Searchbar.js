@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+
 //import { propTypes } from 'react-bootstrap/esm/Image';
 
-const propTypes = {
+const propTypes = { //Sprawdzanie właściwości Props
     onSearch: PropTypes.func.isRequired
 };
 
