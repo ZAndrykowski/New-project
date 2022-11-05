@@ -21,7 +21,7 @@ const defaultProps = { //Nadpisanie standardowej wartości dla danego props'a
 function Table(props) {
     return (
         <ThemeContext.Consumer>
-            {value=>
+            {({theme})=>
             <Col className={styles.flexcol}>
 
                 <Container fluid="md" className={styles.table}>
@@ -44,7 +44,7 @@ function Table(props) {
                         <div className="d-grid gap-2">
                             <p>DOSTĘPNY</p>
                             <p>{props.reserve}</p>
-                            <Button variant={value} size="lg" className={styles.button}>WYBIERZ</Button>{'  '}
+                            <Button variant={theme} size="lg" className={styles.button}>WYBIERZ</Button>{'  '}
                         </div>
                     </Row>
                 </Container>

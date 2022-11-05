@@ -6,7 +6,7 @@ import ThemeContext from '../../../context/themeContext';
 const propTypes = { //Sprawdzanie właściwości Props
     onSearch: PropTypes.func.isRequired
 };
-
+const { theme } = ThemeContext
 function Searchbar(props) {
 
     const [stateSearch, setStateSearch] = useState('');
@@ -26,7 +26,7 @@ function Searchbar(props) {
 
     return (
         <ThemeContext.Consumer>
-            {value =>
+            {( {theme} ) =>
                 <div className='from-control'>
                     <input
                         value={stateSearch}
@@ -39,7 +39,7 @@ function Searchbar(props) {
                         className='input-text'
                         type="text"
                         placeholder='Szukajcie, a znajdziecie..' />
-                    <Button variant={value} size="sm" onClick={search}>Click</Button>
+                    <Button variant={theme} size="sm" onClick={search}>Click</Button>
                 </div>
             }
         </ThemeContext.Consumer>

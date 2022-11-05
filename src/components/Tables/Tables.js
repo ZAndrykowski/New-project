@@ -21,11 +21,11 @@ class Tables extends Component {
     render() {
         return (
             <ThemeContext.Consumer>
-                {value =>
+                {({theme}) =>
                     <Container fluid="xl" className={styles.container}>
                         <Row className={styles.flexrow}>
                             <Col xs={3}><h2 className={styles.table}>Dostępne stoliki: </h2></Col>
-                            <Col xs={7}><Button variant={value} as="input" type="reset" value="Odśwież" /></Col>
+                            <Col xs={7}><Button variant={theme} as="input" type="reset" value="Odśwież" /></Col>
 
                         </Row>
                         <Row className={styles.flexrow}>
