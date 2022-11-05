@@ -1,5 +1,11 @@
+import ThemeContext from "../../context/themeContext";
+
 const Footer = (props) =>(
-    <div className={`text-center m-3 text-${props.theme}`}>NOWA STOPKA 2022</div>
+    <ThemeContext.Consumer>
+        {value =>
+            <div className={`text-center m-3 text-${value}`}>NOWA STOPKA 2022</div>
+        }
+    </ThemeContext.Consumer>
 );
 
 export default Footer;
