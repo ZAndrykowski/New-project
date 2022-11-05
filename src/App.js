@@ -121,7 +121,7 @@ class App extends Component {
   state = { //STAN
     tables: [],
     loading: true,
-    // theme: 'success',
+    theme: 'success',
   }
 
   searchHandler(stateSearch) {

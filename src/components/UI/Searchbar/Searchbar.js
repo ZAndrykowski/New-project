@@ -6,7 +6,6 @@ import ThemeContext from '../../../context/themeContext';
 const propTypes = { //Sprawdzanie właściwości Props
     onSearch: PropTypes.func.isRequired
 };
-const { theme } = ThemeContext
 function Searchbar(props) {
 
     const [stateSearch, setStateSearch] = useState('');
