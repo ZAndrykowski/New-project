@@ -11,7 +11,6 @@ function Header(props)
             <h4 className={styles.text}>Pod Kasztanem albo innym Ogórkiem</h4>
         </div>
         {props.children}
-        {/* <Searchbar onSearch={props.onSearch}/> */}
         </header>
     );
 }
