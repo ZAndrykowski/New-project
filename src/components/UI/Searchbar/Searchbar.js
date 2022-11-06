@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import ThemeContext from '../../../context/themeContext';
@@ -23,9 +23,9 @@ function Searchbar(props) {
         }
     }
 
+    const theme = useContext(ThemeContext);
+
     return (
-        <ThemeContext.Consumer>
-            {( {theme} ) =>
                 <div className='from-control'>
                     <input
                         value={stateSearch}
@@ -38,10 +38,9 @@ function Searchbar(props) {
                         className='input-text'
                         type="text"
                         placeholder='Szukajcie, a znajdziecie..' />
-                    <Button variant={theme} size="sm" onClick={search}>Click</Button>
+                    <Button variant={theme.theme} size="sm" onClick={search}>Click</Button>
                 </div>
-            }
-        </ThemeContext.Consumer>
+            
     );
 }
 Searchbar.propTypes = propTypes;
