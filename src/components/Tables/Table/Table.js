@@ -1,4 +1,4 @@
-import React from 'react'; //importowanie REACT'a
+import React, {useContext} from 'react'; //importowanie REACT'a
 import styles from './Table.module.css';
 // import imgTable from '../../../assets/images/table (1).jpg';
 import { Row, Col, Button, Container } from 'react-bootstrap';
@@ -19,9 +19,8 @@ const defaultProps = { //Nadpisanie standardowej wartości dla danego props'a
 }
 
 function Table(props) {
+    const theme = useContext(ThemeContext);
     return (
-        <ThemeContext.Consumer>
-            {({theme})=>
             <Col className={styles.flexcol}>
 
                 <Container fluid="md" className={styles.table}>
@@ -44,13 +43,11 @@ function Table(props) {
                         <div className="d-grid gap-2">
                             <p>DOSTĘPNY</p>
                             <p>{props.reserve}</p>
-                            <Button variant={theme} size="lg" className={styles.button}>WYBIERZ</Button>{'  '}
+                            <Button variant={theme.theme} size="lg" className={styles.button}>WYBIERZ</Button>{'  '}
                         </div>
                     </Row>
                 </Container>
             </Col>
-            }
-        </ThemeContext.Consumer>
     );
 
 

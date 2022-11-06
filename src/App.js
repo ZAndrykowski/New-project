@@ -122,6 +122,7 @@ class App extends Component {
     tables: [],
     loading: true,
     theme: 'success',
+    themeHeader: 'primary'
   }
 
   searchHandler(stateSearch) {
@@ -145,7 +146,9 @@ class App extends Component {
 
   changeTheme = () => { //zmienianie szablonu kolorów
     const newTheme = this.state.theme === 'primary' ? 'danger' : 'primary';
+    const newThemeHeader = this.state.themeHeader === 'primary' ? 'success' : 'primary';
     this.setState({ theme: newTheme });
+    this.setState({ themeHeader: newThemeHeader });
   }
 
   render() {
@@ -179,6 +182,7 @@ class App extends Component {
     return (
       <ThemeContext.Provider value={{
         theme: this.state.theme,
+        themeHeader: this.state.themeHeader,
         changeTheme: this.changeTheme
       }}>
         <div className="App">

@@ -7,7 +7,7 @@ const propTypes = { //Sprawdzanie właściwości Props
     onSearch: PropTypes.func.isRequired
 };
 function Searchbar(props) {
-
+    const theme = useContext(ThemeContext);
     const [stateSearch, setStateSearch] = useState('');
 
 
@@ -23,7 +23,7 @@ function Searchbar(props) {
         }
     }
 
-    const theme = useContext(ThemeContext);
+
 
     return (
                 <div className='from-control'>
@@ -38,7 +38,7 @@ function Searchbar(props) {
                         className='input-text'
                         type="text"
                         placeholder='Szukajcie, a znajdziecie..' />
-                    <Button variant={theme.theme} size="sm" onClick={search}>Click</Button>
+                    <Button variant={theme.themeHeader} size="sm" onClick={search}>Click</Button>
                 </div>
             
     );
