@@ -2,18 +2,21 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .menuItem{
-    text-align: right;
+    display: inline;;
+    
 }
 
 .menuContainer{
+    
     border: 1px solid #4d0000 ;
     margin: 10px 0;
-    background-color: aliceblue;
 }
 
 .menuText{
@@ -27,4 +30,8 @@ a:link{
 
 a:visited{
     text-decoration: none;
+}
+
+.menuItem a{
+    color:black;
 }

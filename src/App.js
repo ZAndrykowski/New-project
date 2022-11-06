@@ -8,6 +8,7 @@ import Searchbar from './components/UI/Searchbar/Searchbar'; // Importowanie wyd
 import Layout from './components/Layout/Layout';
 import Footer from './components/Footer/Footer';
 import ThemeContext from './context/themeContext';
+import AuthContext from './context/authContext';
 import ThemeButton from './components/UI/ThemeButton/ThemeButton';
 //import imgTable from './assets/images/table (1).jpg'
 //import Login from './components/Login/Login';
@@ -122,7 +123,8 @@ class App extends Component {
     tables: [],
     loading: true,
     theme: 'success',
-    themeHeader: 'primary'
+    themeHeader: 'primary',
+    isAuthenticaded: false
   }
 
   searchHandler(stateSearch) {
@@ -180,20 +182,26 @@ class App extends Component {
     ///////////////////////////////////////////////////////////////////////////
 
     return (
-      <ThemeContext.Provider value={{
-        theme: this.state.theme,
-        themeHeader: this.state.themeHeader,
-        changeTheme: this.changeTheme
+      <AuthContext.Provider value={{
+        isAuthenticaded: this.state.isAuthenticaded,
+        login: () => this.setState({ isAuthenticaded: true }),
+        logout:  () => this.setState({ isAuthenticaded: false })
       }}>
-        <div className="App">
-          <Layout
-            header={header}
-            menu={menu}
-            content={content}
-            footer={footer}
-          />
-        </div>
-      </ThemeContext.Provider>
+        <ThemeContext.Provider value={{
+          theme: this.state.theme,
+          themeHeader: this.state.themeHeader,
+          changeTheme: this.changeTheme
+        }}>
+          <div className="App">
+            <Layout
+              header={header}
+              menu={menu}
+              content={content}
+              footer={footer}
+            />
+          </div>
+        </ThemeContext.Provider>
+      </AuthContext.Provider>
     );
   }
 }
