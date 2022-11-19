@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import ThemeContext from './context/themeContext';
 import AuthContext from './context/authContext';
 import ThemeButton from './components/UI/ThemeButton/ThemeButton';
+import Egzamin from './components/Egzamin/Egzamin';
 //import imgTable from './assets/images/table (1).jpg'
 //import Login from './components/Login/Login';
 //import Reserve from './components/Reserve/Reserve';
@@ -185,7 +186,7 @@ class App extends Component {
       <AuthContext.Provider value={{
         isAuthenticaded: this.state.isAuthenticaded,
         login: () => this.setState({ isAuthenticaded: true }),
-        logout:  () => this.setState({ isAuthenticaded: false })
+        logout: () => this.setState({ isAuthenticaded: false })
       }}>
         <ThemeContext.Provider value={{
           theme: this.state.theme,
@@ -201,6 +202,7 @@ class App extends Component {
             />
           </div>
         </ThemeContext.Provider>
+        <Egzamin />
       </AuthContext.Provider>
     );
   }
